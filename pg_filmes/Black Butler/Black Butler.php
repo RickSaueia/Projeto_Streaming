@@ -13,12 +13,12 @@ include "../../session.php";
 </head>
 
 <body>
-    
+
     <div id="loadingScreen" class="loading-screen">
         <div class="loader"></div>
     </div>
 
-   
+
     <div id="content" style="display:none;">
         <div class="overlay2" id="overlay2"></div>
         <div class="overlay3" id="overlay3"></div>
@@ -37,12 +37,12 @@ include "../../session.php";
                     <p>Gêneros</p>
                     <div class="generos_nav_links">
                         <a href="../../filmes_generos/pg_filme_ação/pg_ação.php">Ação</a>
-                        <a href="../../filmes_generos/pg_filme_aventura/pg_ação.php">Comédia</a>
-                        <a href="../../filmes_generos/pg_filme_comedia/pg_ação.php">Romance</a>
-                        <a href="../../filmes_generos/pg_filme_drama/pg_ação.php">Suspense</a>
-                        <a href="../../filmes_generos/pg_filme_fantasia/pg_ação.php">Aventura</a>
-                        <a href="../../filmes_generos/pg_filme_romance/pg_ação.php">Drama</a>
-                        <a href="../../filmes_generos/pg_filme_suspense/pg_ação.php">Fantasia</a>
+                        <a href="../../filmes_generos/pg_filme_comedia/pg_comedia.php">Comédia</a>
+                        <a href="../../filmes_generos/pg_filme_romance/pg_romance.php">Romance</a>
+                        <a href="../../filmes_generos/pg_filme_suspense/pg_suspense.php">Suspense</a>
+                        <a href="../../filmes_generos/pg_filme_aventura/pg_aventura.php">Aventura</a>
+                        <a href="../../filmes_generos/pg_filme_drama/pg_drama.php">Drama</a>
+                        <a href="../../filmes_generos/pg_filme_fantasia/pg_fantasia.php">Fantasia</a>
                     </div>
 
 
