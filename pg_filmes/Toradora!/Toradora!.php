@@ -13,12 +13,12 @@ include "../../session.php";
 </head>
 
 <body>
-    <!-- Tela de carregamento -->
+    
     <div id="loadingScreen" class="loading-screen">
         <div class="loader"></div>
     </div>
 
-    <!-- Conteúdo da sua página -->
+   
     <div id="content" style="display:none;">
         <div class="overlay2" id="overlay2"></div>
         <div class="overlay3" id="overlay3"></div>

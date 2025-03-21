@@ -1,47 +1,47 @@
-// Função para exibir a tela de carregamento
+
 function showLoadingScreen() {
     let loadingScreen = document.getElementById('loadingScreen');
     let content = document.getElementById('content');
     
-    // Exibe a tela de carregamento e esconde o conteúdo
+   
     loadingScreen.style.display = 'flex';
     content.style.display = 'none';
 }
 
-// Função para esconder a tela de carregamento e mostrar o conteúdo
+
 function hideLoadingScreen() {
     let loadingScreen = document.getElementById('loadingScreen');
     let content = document.getElementById('content');
     
-    // Esconde a tela de carregamento e exibe o conteúdo
+   
     setTimeout(() => {
         loadingScreen.style.display = 'none';
         content.style.display = 'block';
-    }, 1000); // Agora a tela de carregamento ficará visível por 1 segundo
+    }, 1000); 
 }
 
-// Controla o comportamento de navegação com setas do navegador
+
 window.addEventListener('popstate', function() {
     if (sessionStorage.getItem('loadingInProgress') === 'true') {
         showLoadingScreen();
-        setTimeout(hideLoadingScreen, 1000); // Após 1 segundo, a tela de carregamento desaparece
+        setTimeout(hideLoadingScreen, 1000); 
     } else {
         hideLoadingScreen();
     }
 });
 
-// Quando a página for carregada, esconder o carregamento e mostrar o conteúdo
+
 window.addEventListener('load', function() {
-    sessionStorage.setItem('loadingInProgress', 'true'); // Marca que o carregamento está em progresso
+    sessionStorage.setItem('loadingInProgress', 'true'); 
     hideLoadingScreen();
-    sessionStorage.setItem('loadingInProgress', 'false'); // Marca que o carregamento terminou
+    sessionStorage.setItem('loadingInProgress', 'false'); 
 });
 
-// Mostrar a tela de carregamento assim que a navegação começar (ao clicar nos links)
+
 document.addEventListener("DOMContentLoaded", function() {
     if (!sessionStorage.getItem('loadingInProgress') || sessionStorage.getItem('loadingInProgress') === 'false') {
         showLoadingScreen();
-        setTimeout(hideLoadingScreen, 1000); // Após 1 segundo, a tela de carregamento desaparece
+        setTimeout(hideLoadingScreen, 1000); 
     }
 });
 
@@ -139,18 +139,18 @@ prevButtons.forEach((button, i) => {
 });
 
 
-// Seleciona os botões
+
 const botaoLike = document.querySelectorAll('.botao-like');
 const botaoDeslike = document.querySelectorAll('.botao-deslike');
 
-// Função para alternar o estado de like e deslike
+
 botaoLike.forEach(button => {
     button.addEventListener('click', function() {
         
-        // Alterna a classe 'blue' do like
+        
         this.classList.toggle('blue');
         
-        // Caso o like seja marcado, remove a marcação do deslike
+        
         if (this.classList.contains('blue')) {
             botaoDeslike.forEach(deslike => {
                 deslike.classList.remove('blue');
@@ -162,10 +162,10 @@ botaoLike.forEach(button => {
 botaoDeslike.forEach(button => {
     button.addEventListener('click', function() {
         
-        // Alterna a classe 'blue' do deslike
+       
         this.classList.toggle('blue');
         
-        // Caso o deslike seja marcado, remove a marcação do like
+        
         if (this.classList.contains('blue')) {
             botaoLike.forEach(like => {
                 like.classList.remove('blue');
@@ -175,6 +175,6 @@ botaoDeslike.forEach(button => {
 });
 
 document.getElementById("nome").addEventListener("input", function () {
-    this.value = this.value.replace(/[0-9]/g, ""); // Remove qualquer número digitado
+    this.value = this.value.replace(/[0-9]/g, ""); 
 });
 

@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- Tela de Carregamento com o Spinner -->
+    
     <div id="loadingScreen" class="loading-screen">
         <div class="loader"></div>
     </div>

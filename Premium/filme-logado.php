@@ -1,7 +1,7 @@
 <?php
 function seletor($genero, $sqlconn)
 {
-    // Busca os filmes do gênero informado
+    
     $query = $sqlconn->prepare("SELECT * FROM conteudos WHERE genero = ?");
     $query->execute([$genero]);
     $reg = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -13,7 +13,7 @@ function seletor($genero, $sqlconn)
                 <div class='lista-filme'>";
 
     foreach ($reg as $filme) {
-        // Obtém a quantidade de likes do filme
+       
         $query_likes = $sqlconn->prepare("SELECT COUNT(*) as total_likes FROM interacoes WHERE id_conteudo = ? AND avaliacoes = 'Like'");
         $query_likes->execute([$filme['id_conteudo']]);
         $like_count = $query_likes->fetch(PDO::FETCH_ASSOC)['total_likes'];
@@ -38,7 +38,7 @@ function seletor($genero, $sqlconn)
         echo "<a href='deslike.php?id_conteudo=" . $filme['id_conteudo'] . "' class='fa-solid fa-thumbs-down botao-deslike'>
                 <div class='deslike-hover-info'>Marcar como não gostei</div></a>";
         
-        // Exibe o contador de likes
+        
         echo "<p class='contador-like'>" . $like_count . "</p>";
         echo "<p class='contador-deslike'>" . $deslike_count . "</p>";
 

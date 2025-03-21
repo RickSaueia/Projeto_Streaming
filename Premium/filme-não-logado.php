@@ -16,7 +16,7 @@ function seletor($genero, $sqlconn)
                 <div class='lista-filme'>";
 
 
-    //lista de filmes
+   
     $i = 0;
     while ($i < count($reg)){
         
