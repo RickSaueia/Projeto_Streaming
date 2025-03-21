@@ -1,5 +1,5 @@
 <?php
-$server = "VPR0681554W11-1\SQLEXPRESS";
+$server = "RICKRYZEN7700X";
 $banco = "Projeto_Streaming_web";
 $user = "sa";
 $pass = "123456";
