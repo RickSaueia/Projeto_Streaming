@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+    background: rgb(0,4,43);
+background: radial-gradient(circle, rgba(0,4,43,1) 0%, rgba(0,3,17,1) 100%, rgba(0,5,92,1) 100%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Noto Sans;
+    text-decoration: none;
+}
+
+/* Tela de carregamento */
+.loading-screen {
+    position: fixed; /* Fixa no topo da tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+    display: flex; /* Usando flexbox para centralizar a animação */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garantir que fique acima de qualquer conteúdo */
+}
+
+/* Loader animado */
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite; /* Animação de rotação durando 2 segundos */
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.nav-box {
+    position: relative;
+    background-color: rgb(61, 62, 83);
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.logo {
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    right: 40px
+}
+
+.logo2_h1 {
+    color: white;
+    font-size:25px;
+    font-weight: bold;
+}
+
+.logo_h1 {
+    color: rgb(18, 188, 255);
+    margin: 0px 0px 0px 100px;
+    font-size:25px;
+    font-weight: bold;
+    
+}
+
+/* Login */
+/* Login */
+/* Login */
+
+.cadastro-txt {
+    color: white;
+    position: absolute;
+    right: 880px;
+    top: 182px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+
+}
+
+.login-container {
+    width: 496px;
+    height: 437px;
+    background-color: rgb(61, 62, 83);
+    text-align: center;
+    box-shadow: rgba(43, 42, 42, 0.25) 0px 2px 5px -1px, rgba(43, 42, 42, 0.3) 0px 1px 3px -1px;
+}
+
+.input-geral{
+    margin-top:50px;
+    
+}
+.login-container input {
+    width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+    background:none;
+    border:none;
+    outline:none;
+    color:rgb(255, 255, 255);
+    border-bottom:2.5px solid rgb(146, 146, 146);
+    transition:0.1s ease-in-out;
+    font-size:17px;
+    background-color: transparent !important;
+    
+}   
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0 1000px rgb(61, 62, 83) inset !important; /* Cor do container */
+    -webkit-text-fill-color: white !important; /* Cor do texto */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.login-container input:focus{
+    border-bottom:2.5px solid rgb(18, 188, 255);
+}
+
+.label-input-nome{
+    position:absolute;
+    top:335px;
+    left:750px;
+    pointer-events:none;
+    transition:0.2s;
+    color:white;
+    font-size:20px
+}
+
+.label-input-email{
+    position:absolute;
+    top: 400px;
+    left:750px;
+    pointer-events:none;
+    transition:0.2s; 
+    color:white;
+    font-size:20px
+}
+
+.label-input-senha{
+    position:absolute;
+    top:460px;
+    left:750px;
+    pointer-events:none;
+    transition:0.2s;
+    color:white;
+    font-size:20px
+}
+
+.label-input-confirmar-senha{
+    position:absolute;
+    top:525px;
+    left:750px;
+    pointer-events:none;
+    transition:0.2s;
+    color:white;
+    font-size:20px
+}
+
+
+.label-input-cpf{
+    position:absolute;
+    top: 590px;
+    left:750px;
+    pointer-events:none;
+    transition:0.2s; 
+    color:white;
+    font-size:20px
+}
+
+.login-container input:focus ~ .label-input-nome,
+.login-container input:valid ~ .label-input-nome{
+    top:305px;
+    font-size:12px;
+    color:rgb(18, 188, 255); 
+}
+
+.login-container input:focus ~ .label-input-email,
+.login-container input:valid ~ .label-input-email{
+    top:370px;
+    font-size:12px;
+    color:rgb(18, 188, 255); 
+}
+
+.login-container input:focus ~ .label-input-senha,
+.login-container input:valid ~ .label-input-senha{
+    top:430px;
+    font-size:12px;
+    color:rgb(18, 188, 255);
+}
+
+.login-container input:focus ~ .label-input-confirmar-senha,
+.login-container input:valid ~ .label-input-confirmar-senha{
+    top:500px;
+    font-size:12px;
+    color:rgb(18, 188, 255);
+}
+
+.login-container input:focus ~ .label-input-cpf,
+.login-container input:valid ~ .label-input-cpf{
+    top:560px;
+    font-size:12px;
+    color:rgb(18, 188, 255);
+}
+
+
+button{
+    position:relative;
+    top:90px;
+    width:120px;
+    height:40px;
+    background:none;
+    border:2px solid white;
+    color:white;
+    background-color: rgb(18, 188, 255);
+    border: none;
+    cursor: pointer; 
+}
+
+button:hover{
+    background-color: rgb(61, 198, 252);
+}
+
+.login-text{
+    color: white;
+    font-size: 14px;
+    margin-top: -15px;
+}
+
+.login-text .a{
+    color: rgb(18, 188, 255);
+    text-decoration: none;
+}
+
+.login-text .a:hover {
+    text-decoration: underline;
+}
+
